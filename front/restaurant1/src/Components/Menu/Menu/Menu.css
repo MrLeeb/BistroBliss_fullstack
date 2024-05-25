@@ -1,0 +1,20 @@
+.menunavb{
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+}
+.menunavb a.active{
+    background-color: rgb(173, 51, 61);
+    color: white;
+}
+.menuitemscontainer{
+display: flex;
+flex-wrap: wrap;
+justify-content: space-evenly;
+}
+.menuitem{
+    border: 0.3px solid grey;
+    border-radius: 10px;
+    width: 20%;
+    margin-top: 50px;
+}

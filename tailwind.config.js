@@ -14,7 +14,20 @@ export default {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
             },
+            
+                gap: {
+                    '13': '3.25rem',
+                    '15': '3.75rem',
+                    '128': '32rem',
+                    '144': '36rem',
+                }
+            
+            },
+            colors: {
+                'black': '#000000' 
+              }
         },
+        
     },
 
     plugins: [forms],

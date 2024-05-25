@@ -11,11 +11,27 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <!-- css -->
+        <link href={{ url ('/' ). "/build/assets/animate.min.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/backToTop.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/bootstrap.min.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/default.css" }}rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/flaticon.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/fontAwesome5Pro.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/huicalendar.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/magnific-popup.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/meanmenu.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/nice-select.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/owl.carousel.min.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/preloader.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/style.css"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/style.css.map"}} rel="stylesheet" />
+        <link href={{ url ('/' ). "/build/assets/swiper-bundle.css"}} rel="stylesheet" />
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100 dark:bg-gray-900">
             @include('layouts.navigation')
 
             <!-- Page Heading -->
@@ -31,6 +47,8 @@
             <main>
                 {{ $slot }}
             </main>
-        </div>
     </body>
 </html>
+
+
+

@@ -1,0 +1,70 @@
+.HaboutContainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.HaboutLeft{
+position: relative;
+}
+
+.HaboutRight{
+display: flex;
+flex-direction: column;
+width: 20%;
+/* gap: 5px; */
+/* height: 150%; */
+}
+
+.moreaboutb{
+    /* height: 30px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px ;
+    height: 30px ;
+    border: 1px solid black;
+    border-radius:105px;
+    margin-top: 20px;
+}
+.Haboutblackbox{
+    background-color: rgb(16, 16, 16);
+    position: absolute;
+    bottom: 1%;
+    right: -5%; 
+ /* transform: translate(0, 50%); */
+  color: white;
+  width: 300px;
+}
+.Haboutphone, .Haboutmail, .Haboutaddress{
+    display: flex;
+    align-items: start;
+    /* justify-content: space-around; */
+ gap:40px;   
+ 
+}
+
+.Haboutblacksocials{
+    display: flex;
+}
+.Haboutblackicons, .Haboutblacktext{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: space-around;  */
+}
+
+.Haboutblackbox p{
+    width: 200px;
+    text-align: start;
+    /* position: relative; */
+    /* top: 0; */
+    /* height: 35px; */
+    /* color: aqua; */
+}
+
+.addressi{
+    width: 30px;
+}
+.Habouti,.addressi{
+
+}

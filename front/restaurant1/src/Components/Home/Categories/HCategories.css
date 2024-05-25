@@ -1,0 +1,14 @@
+.Hcategories{
+    display: flex;
+    justify-content: space-evenly;
+}
+.Hcategory{
+    border: 1px solid black;
+    width: 20%;
+    padding-bottom: 15px;
+}
+
+.Link{
+color:red;
+
+}

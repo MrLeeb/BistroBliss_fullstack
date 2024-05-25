@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\BookController;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,13 +23,52 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+//     return view('dashboard');
+// })->middleware(['auth', 'verified'])->name('dashboard');
+
+// })->middleware(['auth', 'verified'])->group(function(){
+//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+// });
+//dd(auth()->user());
+    return view('./adminscontrol/admincontrol');
+})
+->middleware(['auth:sanctum',
+//  'verified'
+ ])
+->name('admincontrol');
+
+// Route::get('./adcategory', function () {
+//     return view('./adminscontrol/category');
+// })->middleware(['auth', 'verified'])->name('adcategory');
+
+Route::get('/admenu', function () {
+    return view('./adminscontrol/menu');
+})->middleware(['auth', 'verified'])->name('admenu');
+
+Route::get('/api/menu', [ItemController::class, 'api'])->name('menuapi');
+Route::get('api/category', [CategoryController::class, 'api'])->name('categoryapi');
+Route::get('api/book', [BookController::class, 'index'])->name('bookapi');
+
+// Route::post('api/book', [BookController::class, 'post']
+// )->name('book');
+
+// Route::post('adcategory',[CategoryController::class, 'store'])->name('adcategory.store');
+
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+// Route::post('/api/book','BookController@post');
+// Route::resource('categories', CategoryController);
+// Route::any('{all}', function () {
+//     return view('welcome');
+// })->where(['all' => '.*']);
+Route::get('/testlog',function(){
+    return view('./LoginAndReg/log');
+});
+
+Route::post('logcred',[UserController::class,'log' ])->name('logcred');
 
 require __DIR__.'/auth.php';

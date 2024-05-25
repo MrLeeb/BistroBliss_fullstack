@@ -1,0 +1,56 @@
+#header{
+ background-color: rgb(73, 73, 73);   
+color: white;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height:35px ;
+}
+.contacts{
+    display: flex;
+    /* background-color: red; */
+    margin-left: 100px;
+    justify-content: space-between;
+    width: 320px;
+}
+
+
+.phone{
+    display: flex;
+    /* background-color: aqua; */
+    width: 133px ;
+    gap: 5px;
+}
+.phonei{
+    /* background-color: blue; */
+    display: flex;
+    align-self: center;
+}
+.mail{
+    display: flex;
+    /* background-color: aqua; */
+    width: 160px ;
+    gap: 5px;
+}
+.maili{
+    /* background-color: blue; */
+    display: flex;
+    align-self: center;
+    /* width: 50px; */
+}
+.socials{
+    display: flex;
+    align-items: center;
+    margin-right: 100px;
+    gap: 5px;
+}
+.socialsi{
+background-color: rgb(93, 92, 92);
+border-radius: 15px;
+/* border: 2px solid black; */
+width: 30px;
+height: 30px;
+display: flex;
+align-items: center;
+justify-content: center;
+}

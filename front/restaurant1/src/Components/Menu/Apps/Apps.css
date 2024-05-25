@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.Apps{
+    display: flex;
+}
+.Appsdetails{
+    margin-left: 100px;
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    text-align: start;
+}
+.Appsdetails h1{
+    font-family: "Playfair Display", serif;
+/* font-weight: bold; */
+}
+
+.Appscontainer{
+display: flex;
+flex-wrap: wrap;
+background-color: rgba(185, 182, 182, 0.262);
+/* background-color: aqua; */
+/* height: 200px; */
+justify-content: space-between;
+/* gap: 60px; */
+width: 60%;
+margin-left: 40px;
+}
+.Appi{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    flex-grow:1 ;
+    /* width: 33%; */
+    background-color: white;
+    padding: 30px;
+}

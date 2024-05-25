@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+body{
+    background-color: rgb(249, 249, 247);
+    
+}
+.booktitle{
+    font-family: "Playfair Display", serif;
+font-size: 100px;
+margin: 0;
+font-weight: 400;
+/* background-color:  #495460; */
+}
+.booktext{
+    width: 30%;
+    margin-left: 35%;
+    color: #495460;
+}
+.bookcontainer{
+    position: relative;
+    
+    margin-top: 50px;
+    /* background-color: blue; */
+}
+.bookform{
+    background-color: white;
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 34%;
+    height: 65%;
+    gap: 50px;
+    justify-content: space-around;
+    /* margin-top:100px;  */
+    margin-left:35%;
+    z-index: 3;
+    position: absolute;
+    /* top: 10%;
+  left: 50%;
+  transform: translate(-50%, -130%); */
+}
+Label{
+    font-weight: 600;
+}
+.inp{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    gap: 10px;
+}
+.field1{
+    width: 200px;
+    height: 35px;
+    border-radius: 50px;
+    border: 1px solid #DBDFD0;
+}
+.sel{
+    width: 208px;
+}
+.field2{
+width: 465px;
+border-radius: 50px;
+height: 30px;
+border: 1px solid #DBDFD0;
+}
+.booksubmit{
+    border: 1px solid #DBDFD0;
+    border-radius: 50px;    
+    background-color: #AD343E;
+    width: 465px;
+    color: white;
+    height: 35px;
+}
+.bookimg{
+/* margin-top: 300px; */
+/* position: absolute; */
+z-index: -3;
+transform: translate(0, 43%);
+}

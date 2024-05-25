@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.Tasteimg{
+position: relative;
+}
+
+.Tasteinimage{
+    position: absolute;
+top: 100%;
+  left: 50%;
+  transform: translate(-50%, 110%);
+  color: white;
+  /* background-color: aqua; */
+width:600px ;
+}
+.Tastetext{
+    font-family: "Playfair Display", serif;
+font-weight: 400;
+font-size: 50px;
+}
+.Tastecontainer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+}
+.Tastefeat{
+    display: flex;
+    text-align: start;
+    justify-content: space-between;
+    /* align-items: center; */
+    width: 25%;
+}
+.Tastefeattext{
+    display: flex;
+    flex-direction: column;    
+    width: 80%;
+    margin-right: 20px;
+}
+.Tastefeattext h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    
+}
+.Tastefeattext p{
+margin-top: 5px;
+}
