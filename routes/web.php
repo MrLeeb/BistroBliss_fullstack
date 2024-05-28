@@ -5,6 +5,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -32,7 +33,7 @@ Route::get('/dashboard', function () {
 //dd(auth()->user());
     return view('./adminscontrol/admincontrol');
 })
-->middleware(['auth:sanctum',
+->middleware(['auth',
 //  'verified'
  ])
 ->name('admincontrol');
@@ -65,10 +66,17 @@ Route::middleware('auth')->group(function () {
 // Route::any('{all}', function () {
 //     return view('welcome');
 // })->where(['all' => '.*']);
-Route::get('/testlog',function(){
+
+
+Route::get('/testlog', function(){
     return view('./LoginAndReg/log');
 });
+  
+  Route::post('/testlog', [UserController::class,'log'])->name('log.adm');
+//   Route::post('/testlog', [AuthenticatedSessionController::class, 'store'])->name('log.adm');
 
-Route::post('logcred',[UserController::class,'log' ])->name('logcred');
+
+
+// Route::post('logcred',[UserController::class,'log' ])->name('logcred');
 
 require __DIR__.'/auth.php';

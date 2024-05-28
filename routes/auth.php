@@ -12,6 +12,7 @@ use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -60,9 +61,9 @@ Route::middleware('auth')->group(function () {
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
 });
+// Route::post('/testlog',[UserController::class,'log']);
 
-
-Route::middleware('admin')->group(function(){
+// Route::middleware('admin')->group(function(){
     Route::get('adcategory',[CategoryController::class, 'index'])->name('adcategory');
     Route::post('adcategory',[CategoryController::class, 'store'])->name('adcategory.store');
     Route::get('adcategory/add',[CategoryController::class, 'create'])->name('adcategory.add');
@@ -76,5 +77,5 @@ Route::middleware('admin')->group(function(){
     Route::delete('admenu/destroy',[ItemController::class, 'destroy'])->name('admenu.destroy');
 
     Route::get('adbookings',[BookController::class, 'index'])->name('adbookings');
-});
+// });
 // Route::post('/api/book','BookController@handle');

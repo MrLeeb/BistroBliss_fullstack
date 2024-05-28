@@ -24,38 +24,38 @@ public function index(){
 
 
 public function log(Request $request){ 
+// return $request; 
+    $credentials = $request->validate([
+        'email' => ['required', 'email'],
+        'password' => ['required'],
+    ]);
 
-    // $credentials = $request->validate([
-    //     'email' => ['required', 'email'],
-    //     'password' => ['required'],
-    // ]);
+    if (Auth::attempt($credentials)) {
+        $request->session()->regenerate();
 
-    // if (Auth::attempt($credentials)) {
-    //     $request->session()->regenerate();
+        return redirect()->intended('dashboard');
+    }
 
-    //     return redirect()->intended('dashboard');
-    // }
-
-    // return back()->withErrors([
-    //     'email' => 'The provided credentials do not match our records.',
-    // ])->onlyInput('email');
+    return back()->withErrors([
+        'email' => 'The provided credentials do not match our records.',
+    ])->onlyInput('email');
 
 
     
-    $loginUserData = $request->validate([
-    'email'=>'required|string|email',
-    'password'=>'required'
-]);
-$user = User::where('email',$loginUserData['email'])->first();
-if(!$user || !Hash::check($loginUserData['password'],$user->password)){
-    return response()->json([
-        'message' => 'Invalid Credentials'
-    ],401);
-}
-$token = $user->createToken($user->name.'-AuthToken')->plainTextToken;
-return response()->json([
-    'token' => $token,
-]);
+//     $loginUserData = $request->validate([
+//     'email'=>'required|string|email',
+//     'password'=>'required'
+// ]);
+// $user = User::where('email',$loginUserData['email'])->first();
+// if(!$user || !Hash::check($loginUserData['password'],$user->password)){
+//     return response()->json([
+//         'message' => 'Invalid Credentials'
+//     ],401);
+// }
+// $token = $user->createToken($user->name.'-AuthToken')->plainTextToken;
+// return response()->json([
+//     'token' => $token,
+// ]);
 
 // if($user->isadmin){
 // $auth = new AuthenticatedSessionController;
