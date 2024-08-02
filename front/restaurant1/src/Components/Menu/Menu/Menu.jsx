@@ -17,7 +17,7 @@ export const Menuitems = () => {
 
   return (
     <div>
-      <h1>Our Menu</h1>
+      <h1 className='bgtext1'>Our Menu</h1>
       <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
       <ul className='menunavb'>
         <NavLink to={"/menu"}>All</NavLink>

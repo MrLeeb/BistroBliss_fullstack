@@ -1,3 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
 body{
-    background-color: blue;
+    background-color: rgb(249, 249, 247);
+    
+}
+.logtitle{
+    font-family: "Playfair Display", serif;
+font-size: 100px;
+margin: 0;
+font-weight: 400;
+margin-left:27%;
+     margin-top:100px;
+/* background-color:  #495460; */
+}
+.logform{
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+     width: 30%;
+     gap: 30px;
+     top: 10%;
+     margin-left:35%;
+     margin-top:100px;
+}
+.logfield{
+    /* width: 200px; */
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid #DBDFD0;
+}
+.logab{
+    margin-top: 1%;
+    margin-left:46%;
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 123px ;
+    border: 1px solid black;
+    border-radius:105px;
+    font-weight: 600;
+}
+.logab1{
+    color: black;
+    text-decoration: none;
+}
+.logsubmit{
+    border: 1px solid #DBDFD0;
+    border-radius: 50px;    
+    background-color: #AD343E;
+    width: 465px;
+    color: white;
+    height: 35px;
 }

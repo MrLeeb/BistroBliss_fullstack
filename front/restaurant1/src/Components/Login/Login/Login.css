@@ -1,0 +1,33 @@
+.logform{
+    background-color: white;
+    
+    display: flex;
+    flex-direction: column;
+     width: 30%;
+     gap: 30px;
+     top: 10%;
+     margin-left:35%;
+     margin-top:100px;
+}
+.logfield{
+    /* width: 200px; */
+    height: 30px;
+    border-radius: 50px;
+    border: 1px solid #DBDFD0;
+}
+.logab{
+    margin-top: 1%;
+    margin-left:46%;
+    height: 40px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 123px ;
+    border: 1px solid black;
+    border-radius:105px;
+    font-weight: 600;
+}
+.logab1{
+    color: black;
+}

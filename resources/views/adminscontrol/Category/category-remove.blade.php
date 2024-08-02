@@ -12,7 +12,7 @@
 
 <body>
 
-    <form class="flex justify-content-center align-items-center" method="POST" action="{{ route('adcategory.destroy', 'categorydeleted')}}">
+    <form class="flex justify-content-center absolute right-2/4 align-items-center mt-10" method="POST" action="{{ route('adcategory.destroy', 'categorydeleted')}}">
         @csrf
 
         <select name="categorydeleted">

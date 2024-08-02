@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\BookController;
@@ -60,22 +61,37 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+    Route::post('logout1', [UserController::class, 'destroy'])
+                ->name('logout1');
 });
 // Route::post('/testlog',[UserController::class,'log']);
 
-// Route::middleware('admin')->group(function(){
+Route::middleware('auth:sanctum')->group(function(){
     Route::get('adcategory',[CategoryController::class, 'index'])->name('adcategory');
     Route::post('adcategory',[CategoryController::class, 'store'])->name('adcategory.store');
     Route::get('adcategory/add',[CategoryController::class, 'create'])->name('adcategory.add');
+    Route::get('adcategory/edit',[CategoryController::class, 'edit']);
+    Route::post('adcategory/edit',[CategoryController::class, 'update'])->name('adcategory.edit');
     Route::get('adcategory/remove',[CategoryController::class, 'delete'])->name('adcategory.delete');
     Route::delete('adcategory/destroy',[CategoryController::class, 'destroy'])->name('adcategory.destroy');
     
     Route::get('admenu',[ItemController::class, 'index'])->name('admenu');
     Route::post('admenu',[ItemController::class, 'store'])->name('admenu.store');
     Route::get('admenu/add',[ItemController::class, 'create'])->name('admenu.add');
+    Route::get('admenu/edit',[ItemController::class, 'edit']);
+    Route::post('admenu/edit',[ItemController::class, 'update'])->name('admenu.edit');
     Route::get('admenu/remove',[ItemController::class, 'delete'])->name('admenu.delete');
     Route::delete('admenu/destroy',[ItemController::class, 'destroy'])->name('admenu.destroy');
 
+    Route::get('blogs',[BlogsController::class, 'index'])->name('adblogs');
+    Route::post('blogs',[BlogsController::class, 'store'])->name('adblogs.store');
+    Route::get('blogs/add',[BlogsController::class, 'create'])->name('adblogs.add');
+    Route::get('blogs/edit',[BlogsController::class, 'edit']);
+    Route::post('blogs/edit',[BlogsController::class, 'update'])->name('adblogs.edit');
+    Route::get('blogs/remove',[BlogsController::class, 'delete'])->name('adblogs.delete');
+    Route::delete('blogs/destroy',[BlogsController::class, 'destroy'])->name('adblogs.destroy');
+
+
     Route::get('adbookings',[BookController::class, 'index'])->name('adbookings');
-// });
+});
 // Route::post('/api/book','BookController@handle');

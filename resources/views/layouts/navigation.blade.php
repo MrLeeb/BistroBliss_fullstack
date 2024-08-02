@@ -26,6 +26,9 @@
                     <x-nav-link :href="route('adbookings')" :active="request()->routeIs('dashboard')">
                         {{ __('Bookings') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('adblogs')" :active="request()->routeIs('dashboard')">
+                        {{ __('Blogs') }}
+                    </x-nav-link>
                 </div>
 
             </div>
@@ -51,7 +54,7 @@
                         </x-dropdown-link>
 
                         <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}">
+                        <form method="POST" action="{{ route('logout1') }}">
                             @csrf
 
                             <x-dropdown-link :href="route('logout')"

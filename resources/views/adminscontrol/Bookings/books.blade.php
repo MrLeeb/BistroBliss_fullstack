@@ -34,8 +34,19 @@
 <h1 class="bg-warning w-12 h-12">{{$booking->status}}</h1>
 
 <div class="flex justify-content-end gap-4 ">
+<form action="bookhandleresponse" method="POST">
+@csrf
+<input type="hidden" name="b" value="{{ $booking->id }}">
+<input type="hidden" name="res" value="acc">
 <button class="bg-success w-16 h-16 text-white">Accept</button>
+</form>
+<form action="bookhandleresponse" method="POST">
+@csrf
+<input type="hidden" name="b" value="{{ $booking->id }}">
+<input type="hidden" name="res" value="rej">
 <button class="bg-danger w-16 h-16 text-white">Reject</button>
+</form>
+
 </div>
 </div>
 @endforeach

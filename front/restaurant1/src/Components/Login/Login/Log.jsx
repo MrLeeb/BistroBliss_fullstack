@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import './Login.css'
 import axios from 'axios'
 import { useDispatch } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, Navigate, useNavigate } from 'react-router-dom';
 import { restaurantSlice } from '../../../restaurantSlice';
+
 
 export const Log = () => {
 axios.defaults.headers.common = {
@@ -28,30 +29,19 @@ const handlesubmit= async (event)=>{
 event.preventDefault();
 try {
 
-  axios.defaults.withCredentials = true;
-axios.defaults.withXSRFToken = true;
-  await axios.get('http://127.0.0.1:8000/sanctum/csrf-cookie').then(
-     axios.post('http://127.0.0.1:8000/login', {email,password})
-     .then(response => {
-      console.log(response)
-  })
-  )
-  // console.log(head)
-  
-  // axios.defaults.headers.common['Authorization'] = 'Bearer ' + head;
-  //  const response= await axios.post('http://127.0.0.1:8000/api/log', {email,password})
+   const response= await axios.post('http://127.0.0.1:8000/api/log', {email,password})
    
-  //    if(response.status === 200) {
-  //   const token = response.data.token;
-  //  await console.log(token)
-  //   // localStorage.setItem('token', token);
-  //   // document.cookie = "token=" + token;
-  //   // axios.defaults.headers.common['X-XSRF-TOKEN'] = token;
-  //   axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
-  //   const response1= await axios.post('http://127.0.0.1:8000/api/log1', {email,password})
-  //   console.log(response1) 
-  //  //  window.location.href = 'http://127.0.0.1:8000/dashboard';
-  // }
+     if(response.status === 200) {
+    const token = response.data.token;
+   await console.log(token)
+    localStorage.setItem('token', token);
+    // document.cookie = "token=" + token;
+    // axios.defaults.headers.common['X-XSRF-TOKEN'] = token;
+    axios.defaults.headers.common['Authorization'] = 'Bearer ' + token;
+    // const response1= await axios.post('http://127.0.0.1:8000/api/log1', {email,password})
+  //  return <Navigate to='/home' />
+   navigate('/')
+  }
   // document.cookie = "token=" + token;
   
   
@@ -68,19 +58,18 @@ axios.defaults.withXSRFToken = true;
   return (
     <div>
             {/* <meta name="csrf-token" content="{{ csrf_token() }}"></meta> */}
-
-        <form onSubmit={handlesubmit}>
+<h1 className='booktitle'>Login As Guest</h1>
+        <form onSubmit={handlesubmit} className='logform'>
 <label>Email</label>
-<input type='text' name='email' value={email} onChange={(e)=>setEmail(e.target.value)}></input>
+<input type='text' name='email' value={email} onChange={(e)=>setEmail(e.target.value)} className='logfield'></input>
 <label>Password</label>
-<input type='password' name='password' value={password} onChange={(e)=>setPass(e.target.value)}></input>
-<input 
-type='submit' 
-></input>
+<input type='password' name='password' value={password} onChange={(e)=>setPass(e.target.value)}  className='logfield'></input>
+<input type='submit' className='booksubmit'></input>
         </form>
-
-<Link to={"http://127.0.0.1:8000/testlog"}>Log2</Link>
+<div className="logab"><Link to={"http://127.0.0.1:8000/testlog"} className='logab1'>Login as Admin</Link></div>
+    {/* <Image source={{}}></Image> */}
 
     </div>
   )
+
   }

@@ -13,6 +13,7 @@ class Book extends Model
         'time',
         'name',
         'phone',
-        'persons'
+        'persons',
+        'userId'
             ];
 }

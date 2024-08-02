@@ -36,7 +36,7 @@ class CategoryController extends Controller
      */
     public function store(StoreCategoryRequest $request)
     {
-        dd($request);
+        
         $category = Category::create([
             'name'=>$request->category,
             'icon'=>$request->caticon
@@ -58,17 +58,28 @@ class CategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    public function edit()
     {
         //
+        $categories =Category::all();
+        $context =[
+            'categories'=> $categories
+        ];
+        return view('./adminscontrol/Category/category-edit', $context);
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCategoryRequest $request, Category $category)
+    public function update(Request $request)
     {
-        //
+    //    dd($request);
+        $category = Category::find($request->categoryedited);
+        //  dd($category);
+        $category->name=$request->newcategory;
+        $category->save();
+
+        
     }
 
     /**

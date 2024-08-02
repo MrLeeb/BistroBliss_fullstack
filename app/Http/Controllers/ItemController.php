@@ -73,16 +73,32 @@ class ItemController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Item $item)
+    public function edit()
     {
+        $categories =Category::all();
+        $items =Item::all();
+        $context =[
+            'items'=> $items,
+            'categories'=> $categories
+        ];
+        return view('./adminscontrol/Item/item-edit',$context);
         //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateItemRequest $request, Item $item)
+    public function update(Request $request,)
     {
+        // 'itemedited', 'itemname','itemprice','itemdescription','itemimage','itemcategory'
+        $item = Item::find($request->itemedited);
+        dd($request);
+        $item->title=$request->itemname;
+        $item->price=$request->itemprice;
+        $item->description=$request->itemdescription;
+        $item->image=$request->itemimage;
+        $item->category=$request->itemcategory;
+        $item->save();
         //
     }
 

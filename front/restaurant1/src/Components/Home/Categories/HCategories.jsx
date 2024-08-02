@@ -30,6 +30,7 @@ const HCategories = () => {
             )
         }
 </div>
+{/* <img alt='f' src={"http://localhost:8000/storage/images/pexels-marta-dzedyshko-2067396 1.png"}></img> */}
     </div>
   )
 }

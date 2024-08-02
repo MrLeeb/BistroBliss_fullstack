@@ -9,12 +9,12 @@
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <!-- <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" /> -->
 
         <!-- css -->
         <link href={{ url ('/' ). "/build/assets/animate.min.css"}} rel="stylesheet" />
         <link href={{ url ('/' ). "/build/assets/backToTop.css"}} rel="stylesheet" />
-        <link href={{ url ('/' ). "/build/assets/bootstrap.min.css"}} rel="stylesheet" />
+        <!-- <link href={{ url ('/' ). "/build/assets/bootstrap.min.css"}} rel="stylesheet" /> -->
         <link href={{ url ('/' ). "/build/assets/default.css" }}rel="stylesheet" />
         <link href={{ url ('/' ). "/build/assets/flaticon.css"}} rel="stylesheet" />
         <link href={{ url ('/' ). "/build/assets/fontAwesome5Pro.css"}} rel="stylesheet" />
@@ -45,7 +45,9 @@
 
             <!-- Page Content -->
             <main>
+                
                 {{ $slot }}
+                
             </main>
     </body>
 </html>

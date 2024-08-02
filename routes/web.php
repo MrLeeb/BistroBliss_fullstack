@@ -33,7 +33,7 @@ Route::get('/dashboard', function () {
 //dd(auth()->user());
     return view('./adminscontrol/admincontrol');
 })
-->middleware(['auth',
+->middleware(['auth:sanctum',
 //  'verified'
  ])
 ->name('admincontrol');
@@ -74,7 +74,8 @@ Route::get('/testlog', function(){
   
   Route::post('/testlog', [UserController::class,'log'])->name('log.adm');
 //   Route::post('/testlog', [AuthenticatedSessionController::class, 'store'])->name('log.adm');
-
+Route::post('/bookhandleresponse', [BookController::class,'handleresponse']);
+// Route::post('/rejectb', [BookController::class,'handleresponse']);
 
 
 // Route::post('logcred',[UserController::class,'log' ])->name('logcred');

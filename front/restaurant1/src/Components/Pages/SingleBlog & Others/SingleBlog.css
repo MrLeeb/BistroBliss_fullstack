@@ -1,0 +1,11 @@
+.bl{
+margin-left: 300px;
+margin-right: 300px;
+text-align: start;
+display: flex;
+flex-direction: column;
+}
+.blogcontent{
+margin-top: 0;
+margin-bottom: 0;
+}

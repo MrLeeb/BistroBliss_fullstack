@@ -6,13 +6,14 @@ import { Taste } from '../Components/About/Taste/Taste'
 import { Information } from '../Components/About/Information/Information'
 import { Feedback } from '../Components/Home/Feedback/Feedback'
 import { Footer } from '../Components/Footer/Footer'
+import NavPar from '../Components/Navbar/NavPar'
 
 
 export const About = () => {
   return (
     <div>
     <Header></Header>
-    <Nav></Nav>
+    <NavPar></NavPar>
     <HAbout></HAbout>
     <Taste></Taste>
     <Information></Information>

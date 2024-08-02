@@ -1,5 +1,5 @@
-@include('adminscontrol.category')
-
+@include('adminscontrol.menu')
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,19 +12,69 @@
 
 <body>
 
-    <form class="flex justify-content-center align-items-center" method="POST" action="{{ route('adcategory.destroy', 'categorydeleted')}}">
-        @csrf
+    <form class="flex flex-col gap-4 justify-content-center align-items-center mt-10" method="POST" action="{{ route('admenu.edit', 'itemedited', 'itemname','itemprice','itemdescription','itemimage','itemcategory')}}">
+        @csrf   
 
-        <select name="categorydeleted">
-           
-            <option value="{{$category->id}}" > {{$category->name}}</option>
-           
+        <select id="editeditem" name="itemedited" >
+           @foreach ( $items as $item)
+            <option value="{{$item->id}}" data-name="{{$item->title}}" data-price="{{$item->price}}" data-description="{{$item->description}}" data-image="{{$item->image}}" data-category="{{$item->category}}"> {{$item->title}}</option>
+           @endforeach
         </select>
+        <span class="flex w-96 justify-between gap-4">
+<label class="text-start">New Item Name:</label>
+<input name="itemname" id="newname" type="text">
+</span>
+<span class="flex w-96 justify-between gap-4">
+<label class="text-start">New Item Price:</label>
+<input name="itemprice" id="newprice" type="number" step="0.01">
+</span>
+<span class=" flex w-96 justify-between gap-4">
+<label class="text-start">New Item description:</label>
+<input name="itemdescription" id="newdescription" type="text">
+</span>
+<span class="flex w-96 justify-between gap-4">
+<label>New Item Image:</label>
+<input name="itemimage" id="newimage" type="text">
+</span>
+<span class="flex w-96 justify-between gap-4">
+<label>New Item Category:</label>
+        <select name="itemcategory" id="newcategory">
+@foreach($categories as $category)
+<option value="{{$category->id}}">{{$category->name}}</option>
+@endforeach
+        </select>
+</span>
         <button class="ms-4" type="submit">
-            {{ __('Delete') }}
+            {{ __('Update') }}
         </button>
-        @method('delete')
         
+        <script>
+  $(function() {
+    $("#editeditem").change(function() {
+        var name = $(this).find(':selected').data('name');
+        var price = $(this).find(':selected').data('price');
+        var desc = $(this).find(':selected').data('description');
+        var img = $(this).find(':selected').data('image');
+        var cat = $(this).find(':selected').data('category');
+        $("#newprice").val(price);
+        $("#newdescription").val(desc);
+        $("#newname").val(name);
+        $("#newimage").val(img);
+        $("#newcategory").val(cat);
+    });
+var name = $(this).find(':selected').data('name');
+        var price = $(this).find(':selected').data('price');
+        var desc = $(this).find(':selected').data('description');
+        var img = $(this).find(':selected').data('image');
+        var cat = $(this).find(':selected').data('category');
+        $("#newprice").val(price);
+        $("#newdescription").val(desc);
+        $("#newname").val(name);
+        $("#newimage").val(img);
+        $("#newcategory").val(cat);
+  });
+</script>
+
     </form>
     
 </body>

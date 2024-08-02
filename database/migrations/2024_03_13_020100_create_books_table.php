@@ -14,11 +14,15 @@ return new class extends Migration
         Schema::create('books', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('date');
+            $table->string('time');
             $table->string('name');
-            $table->integer('phone');
+            $table->string('phone');
             $table->smallInteger('persons');
             $table->enum('status',['ACCEPTED','REJECTED','PENDING'])->default('PENDING');
-        });
+            $table->foreignId('userId');
+            $table->foreign('userId')->on('users')->references('id');
+                });
     }
 
     /**

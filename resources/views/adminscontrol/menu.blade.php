@@ -19,20 +19,15 @@
         </h2>
     </x-slot>
 
-    <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
-            <div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
-                <div class="p-6 text-gray-900 dark:text-gray-100">
-                    
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </x-app-layout>
 
-<div class=" list-group w-16 gap-4 activator  ">
+
+<div class=" flex flex-col justify-content-around w-20 h-96 gap-4 activator mb-28 ml-4 absolute">
+  <h2 class="font-semibold text-lg text-center">Item:</h2>
+  <div class=" list-group w-20 gap-4 activator  ">
 <a class="list-group-item activee " href="/admenu/add">add</a>
 <a class="list-group-item activee " href="/admenu/edit">edit</a>
 <a class="list-group-item activee" href="/admenu/remove">remove</a> 
-
+</div>
 </div>

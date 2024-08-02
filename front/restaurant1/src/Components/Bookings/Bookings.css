@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+.bookings{
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.booking{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-evenly;
+    border: 1.5px solid black;
+    border-radius: 50px;
+}
+.bfield{
+    width: 11%;
+    /* border: 1px solid red; */
+
+}
+.btitle{
+    display: flex;
+    justify-content: space-evenly;
+    /* height: 100%; */
+}
+.bstat{
+    color: white;
+}
+.bookscontainer{
+   
+    width: 90%;
+    background-color: rgba(185, 182, 182, 0.262);
+    border-radius: 15px;
+}
+.bookingstitle{
+    /* text-align: start; */
+    font-family: "Playfair Display", serif;
+}
+.booking .bfield{
+    font-size: larger;
+    font-weight: 500;
+}

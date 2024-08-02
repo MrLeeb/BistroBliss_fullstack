@@ -1,6 +1,6 @@
 @include('adminscontrol.category')
 
-<div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg">
+<div class="bg-white dark:bg-gray-800 overflow-hidden shadow-sm sm:rounded-lg mt-10">
             <x-guest-layout>
     <form method="POST" action="{{ route('adcategory.store') }}">
         @csrf

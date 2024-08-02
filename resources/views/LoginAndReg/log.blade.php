@@ -10,15 +10,20 @@
     @csrf
 </head>
 <body>
+    <h1 class="logtitle">Sign in As Admin</h1>
+<form method="POST" action="{{ route('log.adm') }}" class="logform">
 @csrf
-<form method="POST" action="{{ route('log.adm') }}">
-@csrf
-<label>Email</label>
-<input type='text' name='logEmail'  ></input>
+@if(isset($message))
+<h2>Email and/or Password are incorrect</h2>
+@endif
+<label class="teal-400">Email</label>
+<input type='text' name='email' class="logfield" ></input>
 <label>Password</label>
-<input type='password' name='logPassword'></input>
-<input type='submit'></input>
+<input type='password' name='password' class="logfield"></input>
+<input type='submit' class="logsubmit"></input>
 </form>
+
+<div class="logab"><a href="http://localhost:3000/login" class='logab1'>Login as Guest</a></div>
 </body>
 </html>
 @csrf

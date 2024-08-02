@@ -1,0 +1,46 @@
+.laberr{
+    display: flex;
+    flex-direction: column;
+    /* padding-left: 42.5%; */
+    height: 43.2px;
+}
+.passerrms{
+    color: red;
+    margin: 0;
+    margin-left: 10px;
+    display: none;
+}
+/* .conf{
+    margin-top: 15px;
+} */
+.flg{
+    margin: 0;
+    margin-top: 21.6px;
+}
+.reglog{
+    /* margin-top: 200px; */
+    color: blue;
+    text-decoration: underline;
+}
+.regform{
+    margin-top: 80px;
+    padding-bottom: 15px;
+    padding-top: 20px;
+    border-bottom: 2px solid rgba(128, 128, 128, 0.315);
+    gap: 25px;
+}
+.anan{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+    /* height: 21.6px; */
+}
+.alrm{
+    margin: 0;
+    /* text-align: start; */
+}
+.errms{
+    color: red;
+    display: none;
+}

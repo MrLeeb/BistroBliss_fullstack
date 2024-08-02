@@ -1,6 +1,5 @@
 import React from 'react'
-import Nav from '../Components/Navbar/Nav'
-import Navout from '../Components/Navbar/Navout'
+import NavPar from '../Components/Navbar/NavPar'
 import Header from '../Components/Header/Header'
 import Homebg from '../Components/Home/HomeBg/Homebg'
 import HCategories from '../Components/Home/Categories/HCategories'
@@ -11,14 +10,11 @@ import { Feedback } from '../Components/Home/Feedback/Feedback'
 import { Footer } from '../Components/Footer/Footer'
 
 
-const Na = Navout;
-
 export const Home = () => {
   return (
     <div>
       <Header></Header>
-      {/* <Nav></Nav> */}
- <Na></Na>
+ <NavPar></NavPar>
       <Homebg></Homebg>
       <HCategories></HCategories>
       <HAbout></HAbout>

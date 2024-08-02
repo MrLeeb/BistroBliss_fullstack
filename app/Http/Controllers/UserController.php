@@ -24,38 +24,30 @@ public function index(){
 
 
 public function log(Request $request){ 
-// return $request; 
+// return $request;
+// dd('aaaaaaaaaaaa');
     $credentials = $request->validate([
-        'email' => ['required', 'email'],
+        'email' => ['required'],
         'password' => ['required'],
     ]);
 
     if (Auth::attempt($credentials)) {
+        $user = Auth::user();
+        //  dd($user);
+        if($user->IsAdmin){
         $request->session()->regenerate();
-
         return redirect()->intended('dashboard');
     }
-
-    return back()->withErrors([
-        'email' => 'The provided credentials do not match our records.',
-    ])->onlyInput('email');
-
-
+}
+// dd($credentials);
+    // return back()->withErrors([
+    //     'email' => 'The provided credentials do not match our records.',
+    // ])->onlyInput('email');
+    // $message ='The provided credentials do not match our records.';
+return  view('./LoginAndReg/log')->with('message', 'The provided credentials do not match our records.');
+// return $message;
     
-//     $loginUserData = $request->validate([
-//     'email'=>'required|string|email',
-//     'password'=>'required'
-// ]);
-// $user = User::where('email',$loginUserData['email'])->first();
-// if(!$user || !Hash::check($loginUserData['password'],$user->password)){
-//     return response()->json([
-//         'message' => 'Invalid Credentials'
-//     ],401);
-// }
-// $token = $user->createToken($user->name.'-AuthToken')->plainTextToken;
-// return response()->json([
-//     'token' => $token,
-// ]);
+
 
 // if($user->isadmin){
 // $auth = new AuthenticatedSessionController;
@@ -66,11 +58,69 @@ public function log(Request $request){
 
 // AuthenticatedSessionController::class, 'store
 }
+public function logguest(Request $request){
+         $loginUserData = $request->validate([
+    'email'=>'required|string|email',
+    'password'=>'required'
+]);
+$user = User::where('email',$loginUserData['email'])->first();
+if(!$user || !Hash::check($loginUserData['password'],$user->password)){
+    return response()->json([
+        'message' => 'Email and/or Password entered are incorrect'
+    ],401);
+}
+$token = $user->createToken($user->name.'-AuthToken')->plainTextToken;
+return response()->json([
+    'token' => $token,
+]);
+}
+public function regguest(Request $request){
+    // $user = User::create([
+    //     'email'=>$request->email,
+    //     'username'=>$request->username,
+    //     'password'=>$request->password
+    // ]);
+    // // dd($category);
+    // $user->save();
+    return response()->json("Account successfully created");
+    
+}
+
+public function validatetoken (Request $request){
+    $token = $request('token');
+
+    if (!$token->isValid()) {
+    return response()->json(['error'], 401);
+    }
+    
+    return response()->json(['valid']);
+    
+    }
+
+    public function destroy(Request $request)
+    {
+        
+        Auth::guard('web')->logout();
+
+        $request->session()->invalidate();
+
+        $request->session()->regenerateToken();
+
+        return redirect('testlog');
+    }
+    public function update(Request $request){
+        $user=$request->user();
+        $id=$user->id;
+        return $id;
+    }
 
 
 public function test(){
 
     return response()->json("you have entered an Authenticated area!");
+}
+public function test2(){
 
+    return response()->json("You got me!");
 }
 }
