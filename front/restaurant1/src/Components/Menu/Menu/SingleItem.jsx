@@ -27,6 +27,10 @@ const allitems=items;
         
         // useEffect(() => {
         const filteredItems = items.filter(item => item.category === catid) 
+
+        const all= document.getElementById('allcategories')
+        console.log(all)
+        all?.classList.remove('active')
         // setItems(filteredItems)
     //   }, [catid]) 
 
@@ -39,12 +43,11 @@ const allitems=items;
 // }
   return (
     <div>
-        <Header></Header>
-        <Nav></Nav>   
+
         <h1>Our Menu</h1>
       <p>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
       <ul className='menunavb'>
-        <NavLink to={"/menu"}>All</NavLink>
+        <NavLink to={"/menu"} id='allcategories'>All</NavLink>
         {
           categories.map((el) => (
             // <div className='Hcategory' key={idx}>

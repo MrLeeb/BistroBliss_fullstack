@@ -18,7 +18,7 @@ public function index(){
         'users'=> $users
     ];
     // return view('./adminscontrol/Category/category-api', $context);   
-    return response()->json($context);
+    return view('./adminscontrol/users-view', $context);  
 }
 
 
@@ -106,12 +106,25 @@ public function validatetoken (Request $request){
 
         $request->session()->regenerateToken();
 
-        return redirect('testlog');
+        return redirect('login');
     }
     public function update(Request $request){
+        // return $request;
+        $request->validate([
+            'username' => 'required',
+            'email' => 'required|email',
+        ]);       
         $user=$request->user();
         $id=$user->id;
-        return $id;
+        $edited = User::find($id);
+
+        $edited->name=$request->username;
+        $edited->email=$request->email;
+$edited->save();
+
+        $success = 'Profile successfully edited!';
+        return $success;
+// return $edited;
     }
 
 

@@ -32,15 +32,15 @@
     @csrf
        
         <span class=" flex w-full justify-between gap-4">
-        <label>Blog Title:</label>
+        <label class="flex items-center">Blog Title:</label>
         <input name="blogtitle" class="w-64 rounded-lg" type="text">
 </span>
         <span class=" flex w-full justify-between gap-4">
-        <label>Date:</label>
+        <label class="flex items-center">Date:</label>
         <input class="w-64 rounded-lg" name="blogdate" type="date">
         </span>
         <span class=" flex w-full justify-between gap-4">
-        <label>Images top:</label>
+        <label class="flex items-center">Images top:</label>
         <input class="w-64" type="file"  name="blogImageTop">
         </span>
         <span>
@@ -48,18 +48,18 @@
         <textarea class="w-full rounded-lg" id="blog"  name="blogcontent"></textarea>
         </span>
         <span class="flex w-full justify-between gap-4">
-        <label>Images Bottom:</label>
+        <label class="flex items-center">Images Bottom:</label>
         <input class="w-64" type="file"  name="blogImageBottom">
         </span>
 
 </span>
 <span class="flex justify-center">
-        <button class="ms-4 bg-gray-200 border-solid border border-black w-20 ml-64" type="submit">
+        <button class="ms-62 w-32 h-12 text-white bg-slate-500" type="submit">
             {{ __('Add') }}
         </button>
         </span>
         
-        <img alt='f' src={"http://localhost:8000/storage/images/pexels-igor-ovsyannykov-205961.png"}></img>
+        
     </form>
     <!-- </div> -->
 </body>

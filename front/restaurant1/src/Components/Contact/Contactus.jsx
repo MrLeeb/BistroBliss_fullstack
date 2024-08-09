@@ -13,7 +13,6 @@ const [message,setMessage]= useState()
       <p className='booktext'>We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
       
         <form  
-        // onSubmit={handlesubmit} 
         className='bookform contactform'>
 
 <div className='inp'>

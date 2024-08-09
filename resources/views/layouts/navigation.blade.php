@@ -29,6 +29,9 @@
                     <x-nav-link :href="route('adblogs')" :active="request()->routeIs('dashboard')">
                         {{ __('Blogs') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('users')" :active="request()->routeIs('dashboard')">
+                        {{ __('Users') }}
+                    </x-nav-link>
                 </div>
 
             </div>

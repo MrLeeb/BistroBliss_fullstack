@@ -12,7 +12,7 @@
 
 <body>
 
-    <form class="flex flex-col gap-4 justify-content-center align-items-center mt-10" method="POST" action="{{ route('admenu.edit', 'itemedited', 'itemname','itemprice','itemdescription','itemimage','itemcategory')}}">
+    <form class="flex flex-col gap-4 absolute right-96  w-[40%] justify-content-center align-items-center mt-10" method="POST" action="{{ route('admenu.edit', 'itemedited', 'itemname','itemprice','itemdescription','itemimage','itemcategory')}}">
         @csrf   
 
         <select id="editeditem" name="itemedited" >
@@ -21,30 +21,30 @@
            @endforeach
         </select>
         <span class="flex w-96 justify-between gap-4">
-<label class="text-start">New Item Name:</label>
+<label class="flex items-center">New Item Name:</label>
 <input name="itemname" id="newname" type="text">
 </span>
 <span class="flex w-96 justify-between gap-4">
-<label class="text-start">New Item Price:</label>
+<label class="flex items-center">New Item Price:</label>
 <input name="itemprice" id="newprice" type="number" step="0.01">
 </span>
 <span class=" flex w-96 justify-between gap-4">
-<label class="text-start">New Item description:</label>
+<label class="flex items-center">New Item description:</label>
 <input name="itemdescription" id="newdescription" type="text">
 </span>
 <span class="flex w-96 justify-between gap-4">
-<label>New Item Image:</label>
+<label class="flex items-center">New Item Image:</label>
 <input name="itemimage" id="newimage" type="text">
 </span>
 <span class="flex w-96 justify-between gap-4">
-<label>New Item Category:</label>
+<label class="flex items-center">New Item Category:</label>
         <select name="itemcategory" id="newcategory">
 @foreach($categories as $category)
 <option value="{{$category->id}}">{{$category->name}}</option>
 @endforeach
         </select>
 </span>
-        <button class="ms-4" type="submit">
+        <button class="ms-64 w-32 h-12 text-white bg-slate-500" type="submit">
             {{ __('Update') }}
         </button>
         

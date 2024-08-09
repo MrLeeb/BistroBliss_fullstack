@@ -23,7 +23,7 @@ const HCategories = () => {
                   <img src={el.icon} ></img>
         <h2>{el.name}</h2>
         <p>In the new era of technology we look in the future with certainty and pride for our life</p>
-        <Link className='Link'>Explore Menu</Link>
+        <Link to={'/menu/'+el.name} className='Link'>Explore Menu</Link>
                     </div>
             )
 

@@ -32,7 +32,7 @@ const MyBookings = () => {
 <h2 className='bfield'>{b.time}</h2>
 <h2 className='bfield'>{b.persons}</h2>
 <h2 className='bfield bstat'  style={{
-        backgroundColor: b.status === 'PENDING' ? 'blue' : 
+        backgroundColor: b.status === 'PENDING' ? 'yellow' : 
                           b.status === 'ACCEPTED' ? 'green' :  
                           b.status === 'REJECTED' ? 'red' :
                           'defaultColor'

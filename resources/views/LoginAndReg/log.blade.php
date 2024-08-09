@@ -10,7 +10,7 @@
     @csrf
 </head>
 <body>
-    <h1 class="logtitle">Sign in As Admin</h1>
+    <h1 class="logtitle">Login As Admin</h1>
 <form method="POST" action="{{ route('log.adm') }}" class="logform">
 @csrf
 @if(isset($message))

@@ -12,15 +12,17 @@
 
 <body>
 
-    <form class="flex justify-content-center absolute right-2/4 align-items-center mt-10" method="POST" action="{{ route('adcategory.destroy', 'categorydeleted')}}">
+    <form class="flex flex-col gap-8 justify-center absolute right-[40%] align-items-center mt-10" method="POST" action="{{ route('adcategory.destroy', 'categorydeleted')}}">
         @csrf
-
+<span>
+    <label>Choose Category to delete:</label>
         <select name="categorydeleted">
             @foreach ($categories as $category)
             <option value="{{$category->id}}" > {{$category->name}}</option>
             @endforeach
         </select>
-        <button class="ms-4" type="submit">
+    </span>
+        <button class="ms-64 w-32 h-12 text-white bg-slate-500" type="submit">
             {{ __('Delete') }}
         </button>
         @method('delete')

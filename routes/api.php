@@ -27,7 +27,7 @@ Route::get('users',[UserController::class,'index' ]);
 Route::get('blogs',[BlogsController::class,'api' ]);
 Route::post('blogsrandom',[BlogsController::class,'getRandomBlogs' ]);
 Route::post('log',[UserController::class,'logguest' ]); 
-Route::post('editprofile',[UserController::class,'update' ]); 
+Route::post('editprofile',[UserController::class,'update' ])->middleware('auth:sanctum');; 
 Route::post('reg',[UserController::class,'regguest' ]); 
 Route::post('log1',[AuthenticatedSessionController::class, 'store']);
 // ->middleware([ 'auth:sanctum']);

@@ -14,7 +14,7 @@
 <body>
 
 @include('adminscontrol.category') 
-    <form class="flex flex-col gap-4 absolute right-2/4 translate-x-full w-48 justify-content-center align-items-center mt-10" method="POST" action="{{ route('adcategory.edit','newcategory','categoryedited'  )}}">
+    <form class="flex flex-col gap-4 absolute right-96  w-[40%] justify-content-center align-items-center mt-10" method="POST" action="{{ route('adcategory.edit','newcategory','categoryedited'  )}}">
        
     @csrf
         <select class="" id="editedcategory" name="categoryedited" >
@@ -24,10 +24,10 @@
             @endforeach
         </select>
         <span class=" flex w-96 justify-between gap-4">
-        <label>New Category Name:</label>
+        <label class="flex items-center">New Category Name:</label>
         <input id="newname" name="newcategory" type="text" value="">
 </span>
-        <button class="ms-4" type="submit">
+        <button class="ms-64 w-32 h-12 text-white bg-slate-500 " type="submit">
             {{ __('Update') }}
         </button>
 

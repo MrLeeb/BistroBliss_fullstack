@@ -29,11 +29,11 @@
     {{ session('success') }}
   </div>
 @endif
-    <form class="flex flex-col gap-4 absolute right-2/4 translate-x-full w-48 justify-content-center align-items-center mt-10" method="POST" action="{{ route('adblogs.destroy','newblog','blogedited'  )}}" enctype="multipart/form-data">
+    <form class="flex flex-col gap-4 absolute  right-96 w-[700px] justify-content-center align-items-center mt-10" method="POST" action="{{ route('adblogs.destroy','newblog','blogedited'  )}}" enctype="multipart/form-data">
        
     @csrf
-    <span class=" flex w-96 justify-between gap-4">
-     <label>Choose Blog to Delete:</label>
+    <span class=" flex w-full justify-between gap-4">
+     <label class="flex items-center">Choose Blog to Delete:</label>
         <select class="w-[53%]" id="editedblog" name="blogedited" >     
         @foreach ($blogs as $blog)
             <option value="{{$blog->id}}" data-name="{{ $blog->title }}" data-date="{{ $blog->date }}" data-content="{{ $blog->content }}" data-imaget="{{ $blog->imagetop }}" data-imageb="{{ $blog->imagebottom }}"> {{$blog->title}}</option>
@@ -41,19 +41,19 @@
             @endforeach
         </select>
     </span>
-        <span class=" flex w-96 justify-between gap-4">
+        <span class=" flex w-full justify-between gap-4">
         <label>Blog Title:</label>
         <p id="bdeltitle"></p>
 </span>
-        <span class=" flex w-96 justify-between gap-4">
+        <span class=" flex w-full justify-between gap-4">
         <label>Blog Date:</label>
         <p id="bdeldate"></p>
 </span>
-        <span class=" flex w-96 justify-between gap-4">
+        <span class=" flex w-full justify-between gap-4">
         <label>Blog Content:</label>
         <p id="bdelcontent"></p>
 </span>
-        <span class=" flex w-96 justify-between gap-4">
+        <span class=" flex w-full justify-between gap-4">
         <label>Blog top Image:</label>
 </span>
 <img id="imagetop">
@@ -63,7 +63,7 @@
 </span>
 <img id="imagebottom">
 
-        <button class="ms-4" type="submit">
+        <button class="ms-60 w-32 h-12 text-white bg-slate-500" type="submit">
             {{ __('Delete') }}
         </button>
 

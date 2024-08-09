@@ -24,27 +24,34 @@
     </div>
 
     <div class="flex flex-col gap-3">
+        <li class="flex gap-28 ml-20">
+            <h1>Date:</h1>
+            <h1 class="ml-12">Time:</h1>
+            <h1 class="ml-12">Name:</h1>
+            <h1 class="ml-12">Phone:</h1>
+            <h1 class="mr-10">Number of Persons:</h1>
+        </li>
     @foreach ($bookings as $booking)
-<div class="flex items-center justify-content-around w-80 border-double border-4 border-primary h-20">
+<div class="flex items-center justify-around  border-double border-4 border-black h-20">
 <h1>{{$booking->date}}</h1>
 <h1>{{$booking->time}}</h1>
 <h1>{{$booking->name}}</h1>
 <h1>{{$booking->phone}}</h1>
 <h1>{{$booking->persons}}</h1>
-<h1 class="bg-warning w-12 h-12">{{$booking->status}}</h1>
+<h1 class="flex items-center justify-center bg-yellow-500 w-24 h-16 text-white">{{$booking->status}}</h1>
 
 <div class="flex justify-content-end gap-4 ">
 <form action="bookhandleresponse" method="POST">
 @csrf
 <input type="hidden" name="b" value="{{ $booking->id }}">
 <input type="hidden" name="res" value="acc">
-<button class="bg-success w-16 h-16 text-white">Accept</button>
+<button class="bg-green-500 w-28 h-16 text-white">Accept</button>
 </form>
 <form action="bookhandleresponse" method="POST">
 @csrf
 <input type="hidden" name="b" value="{{ $booking->id }}">
 <input type="hidden" name="res" value="rej">
-<button class="bg-danger w-16 h-16 text-white">Reject</button>
+<button class="bg-red-500 w-28 h-16 text-white">Reject</button>
 </form>
 
 </div>

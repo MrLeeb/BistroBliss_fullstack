@@ -8,13 +8,10 @@ const Blogs = () => {
     useEffect(() => {
       axios.get('http://127.0.0.1:8000/api/blogs').then((res) => 
       setBlogs(res.data.items)
-    //   console.log(res)
       )
         .catch(err => console.log(err));
     }, [])
-    console.log(blogs);
-    
-    
+
  
     return (
     <div>
