@@ -11,27 +11,27 @@ export const Delivery = () => {
   return (
     <div className='HdeliveryC'>
       <div className='HdeliveryLeft'>
-        <img src={img1} width={500}></img>
+        <img className='HdeliveryLefti1' src={img1}></img>
         <div className='HdeliveryLeft1'>
-        <img src={img3}></img>
-        <img src={img2}></img>
-</div>
+          <img className='HdeliveryLefti2' src={img3}></img>
+          <img className='HdeliveryLefti2' src={img2}></img>
+        </div>
       </div>
       <div className='HdeliveryRight'>
-<h1>Fastest Food Delivery in City</h1>
-<p>Our visual designer lets you quickly and of drag a down your way to customapps for both keep desktop. </p>
-<div className='HdeliveryRicon'>
-<img src={img4} height={20}></img>
-<h5>Delivery within 30 minutes</h5>
-</div>
-<div className='HdeliveryRicon'>
-<img src={img5} height={20}></img>
-<h5>Best Offer & Prices</h5>
-</div>
-<div className='HdeliveryRicon'>
-<img src={img6} height={20}></img>
-<h5>Online Services Available</h5>
-</div>
+        <h1 className='font'>Fastest Food Delivery in City</h1>
+        <p>Our visual designer lets you quickly and of drag a down your way to customapps for both keep desktop. </p>
+        <div className='HdeliveryRicon'>
+          <img src={img4} height={20}></img>
+          <h5>Delivery within 30 minutes</h5>
+        </div>
+        <div className='HdeliveryRicon'>
+          <img src={img5} height={20}></img>
+          <h5>Best Offer & Prices</h5>
+        </div>
+        <div className='HdeliveryRicon'>
+          <img src={img6} height={20}></img>
+          <h5>Online Services Available</h5>
+        </div>
       </div>
     </div>
   )

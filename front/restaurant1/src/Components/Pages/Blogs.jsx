@@ -21,6 +21,8 @@ const Blogs = () => {
         {/* <NavLink to={"/menu"}>All</NavLink> */}
         {
           blogs.map((el) => (
+
+            
             // <div className='Hcategory' key={idx}>
             // <div className='blogitem'>
               <a href={"/blogs/" + el.id} className={'bloglink'}>

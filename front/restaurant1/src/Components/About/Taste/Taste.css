@@ -5,10 +5,12 @@ position: relative;
 }
 
 .Tasteinimage{
-    position: absolute;
+    position: relative;
+    /* position: absolute; */
 top: 100%;
   left: 50%;
-  transform: translate(-50%, 110%);
+  transform: translate(-50%, 110%);     
+  transform: translate(-50%, -165%);
   color: white;
   /* background-color: aqua; */
 width:600px ;
@@ -44,3 +46,4 @@ font-size: 50px;
 .Tastefeattext p{
 margin-top: 5px;
 }
+

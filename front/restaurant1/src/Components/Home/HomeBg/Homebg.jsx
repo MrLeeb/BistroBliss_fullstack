@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 const Homebg = () => {
     return (
-        <div>
+        <div className='homebgcont'>
             <div className='container1'></div>
             <img src={bg} alt='' width={1519}></img>
             <div className='bgtext'>

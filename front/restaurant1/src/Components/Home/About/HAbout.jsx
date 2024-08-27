@@ -12,7 +12,7 @@ export const HAbout = () => {
             <div className='HaboutLeft'>
                 <img src={bg} alt='' width={500}></img>
                 <div className='Haboutblackbox'>
-                    <h1>Come and visit us</h1>
+                    <h2 className='align'>Come and visit us</h2>
 {/* <div className='Haboutblacksocials'>
 <div className='Haboutblackicons'>
 <LuPhone/>
@@ -35,14 +35,15 @@ export const HAbout = () => {
                     <p>happytummy@restaurant.com</p>
                     </div>
                     <div className='Haboutaddress'>
-                    <TiLocationOutline className='addressi'/>
+                    {/* <TiLocationOutline className='addressi'/> */}
+                    <TiLocationOutline className='Habouti'/>
                     <p>837 W. Marshall Lane Marshalltown, IA 50158, Los Angeles</p>
                     </div>
 
                 </div>
             </div>
             <div className='HaboutRight'>
-                <h1>We provide healthy food for your family</h1>
+                <h1 className='font'>We provide healthy food for your family</h1>
                 <h5>Our story began with a vision to create a unique dining experience that merges fine dining, exceptional service, and a vibrant ambience.Rooted in city's rich culinary culture, we aim to honor our local roots while infusing a global palete.</h5>
                 <p>At place, we believe that dining is not just about food, but also about the overall experience. Our staff, renowned for their warmth and dedication, strives to make every visit an unforgettable event.</p>
                 <button className='moreaboutb'>More About Us</button>

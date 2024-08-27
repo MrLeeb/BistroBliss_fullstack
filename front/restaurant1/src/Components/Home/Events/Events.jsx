@@ -8,7 +8,7 @@ export const Events = () => {
   return (
 
     <div className='Heventshead'>
-<h1>We also offer unique services for your events</h1>
+<h1 className='bgtext1 Heventstitle'>We also offer unique services for your events</h1>
 
 <div className='HeventsContainer'>
 

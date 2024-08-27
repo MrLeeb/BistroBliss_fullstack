@@ -1,12 +1,16 @@
 .HdeliveryC{
     margin-top: 50px;
     display: flex;
+    gap: 50px;
+    gap: 3.3%;
 }
 .HdeliveryLeft{
     display: flex;
-    justify-content: space-between;
-    width: 40%;
+    /* justify-content: space-around; */
+    width: 50%;
     gap: 10px;
+    flex-wrap: wrap;
+    margin-left: 30px;
 }
 .HdeliveryLeft1{
     display: flex;
@@ -14,16 +18,36 @@
 gap: 20px;
 margin-top: 30px;
 height: 600px;
+width: 40%;
 }
 .HdeliveryRight{
     padding-top: 100px;
-    margin-left: 230px;
+    /* margin-left: 230px; */
     text-align: start;
 width: 30%;
 }
+.HdeliveryRight h1{
+    font-weight: 500;
+    width: 60%;
+}
 .HdeliveryRicon{
+    margin-top: 20px;
     display: flex;
     gap: 20px;
     align-items: center;
     /* justify-content: space-around; */
 }
+.HdeliveryLeft img{
+    /* width: 100%; */
+}
+.HdeliveryLefti1{
+ width: 56.8%;   
+}
+.HdeliveryLefti2{
+ /* width: 56.8%;    */
+}
+@media (max-width :1406px){
+    .HdeliveryLefti1{
+        width: 80%;   
+       }
+      }

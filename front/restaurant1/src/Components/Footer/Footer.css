@@ -51,6 +51,9 @@
         width: 27%;
         text-align: start;
     }
+    .footercol3 h5{
+        padding-bottom: 20px;
+    }
     .footercol3img{
         display: flex;
         justify-content: space-between;

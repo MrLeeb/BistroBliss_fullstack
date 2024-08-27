@@ -30,7 +30,7 @@ event.preventDefault();
 try {
 
    const response= await axios.post('http://127.0.0.1:8000/api/log', {email,password})
-   
+  
      if(response.status === 200) {
     const token = response.data.token;
    await console.log(token)

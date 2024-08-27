@@ -13,7 +13,7 @@ const HCategories = () => {
 // console.log(categories)
     return (
     <div className=''>
-        <h1>Browse Our Menu</h1>
+        <h1 className='font'>Browse Our Menu</h1>
         <div className='Hcategories'>
         {
             

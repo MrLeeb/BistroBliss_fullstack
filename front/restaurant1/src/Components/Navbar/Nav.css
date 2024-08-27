@@ -3,6 +3,7 @@ header{
     position: sticky;
     display: flex;
     justify-content: space-evenly;
+    gap: 20px;
     padding-top: 10px;
 }
 nav{
@@ -56,6 +57,11 @@ ul a.active{
     font-weight: 600;
     background-color: white;
 }
+.booktableb{
+    width: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 .profile{
     display: flex;
     gap: 30px;
@@ -66,10 +72,71 @@ ul a.active{
     color: black;
     font-family: "Playfair Display", serif;
     font-size: x-large;
-    padding-bottom: 10px;
-    /* height: ; */
+    padding-top: 10px;
+    height:fit-content ;
 }
 .navprofout{
     display: flex;
     gap: 10px;
 }
+.navicon{
+    display: none;
+}
+
+@media (min-width :600.1px){
+ 
+    
+    /* .r{
+         display: flex;
+        width:309.7px;
+    height:50.4px;       
+    }
+    .sin11{
+        display: flex;
+    }
+    .sin12{
+        display: none !important;
+    } */
+    
+    }
+   
+    @media (max-width :986px){
+
+ .booktableb{
+    width: 100px;
+        /* flex-grow: 2; */
+    }
+.navprofout{
+    width: 40%;
+}
+      .navicon{
+        display: block;
+       
+        margin-top: 90px;
+        width: 50px;
+      }
+      #navba{
+         position: absolute;
+        left: 0px;
+       width: fit-content;
+      }
+       .navb{
+        margin: 0;
+         background-color: brown;
+        position: absolute;
+        left: 0px;
+  display: none;
+        flex-direction: column;
+        gap: 3px;       
+        padding: 0;
+        padding-left: 5px;
+        padding-right:5px ;
+       } 
+       .navb a{
+        color: white;
+       }
+       .navprofout{
+        flex-direction: column;
+    gap: 0px;   
+    }
+        }

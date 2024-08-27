@@ -3,22 +3,26 @@
 a{
     text-decoration: none;
 }
+.homebgcont{
+    height: 780px;
+}
 .container1{
     position: relative;
     text-align: center;
 }
 .bgtext{
-     position: absolute;
+     /* position: absolute;
     top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  
+  left: 50%; */
+  transform: translate(76%, -143%);
+  width: 40%;
 }
 .bgtext1{
    font-family: "Playfair Display", serif;
   /* background-color: brown; */
   font-weight: 400;
   font-size: 100px;
+  font-size: 600%;
 }
 .bgtext2{
     /* width: 40%;
@@ -55,3 +59,37 @@ display: flex;
     border: 1px solid black;
  color: black;   
 }
+@media (max-width :1388px){
+    .bgtext{
+        /* width: 100%; */
+        /* transform: translate(0, -143%); */
+        /* justify-content: ; */
+    }
+    .bgtext1{
+       font-size: 450%; 
+        /* margin-top: 250px; */
+    }
+      
+    .homebgcont{
+        
+       /* margin-top: 50px;  */
+    }
+      }
+
+
+@media (max-width :764px){
+    .bgtext{
+        width: 100%;
+        transform: translate(0, -143%);
+        /* justify-content: ; */
+    }
+    .bgtext1{
+       font-size: 450%; 
+        /* margin-top: 250px; */
+    }
+      
+    .homebgcont{
+        
+       /* margin-top: 50px;  */
+    }
+      }

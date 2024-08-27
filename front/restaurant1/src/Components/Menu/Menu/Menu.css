@@ -18,3 +18,12 @@ justify-content: space-evenly;
     width: 20%;
     margin-top: 50px;
 }
+.menuitem img{
+    width: 100%;
+
+}
+@media (max-width :890px){
+.menuitem{
+    width: 35%;
+}
+      }

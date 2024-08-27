@@ -3,7 +3,9 @@ import { Fragment } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import logo from '../../Images/Logo.png'
 import './Nav.css'
+import { AiOutlineMenu } from "react-icons/ai";
 import axios from 'axios'
+
 
 const Nav = () => {
   const [name,setName]=useState();
@@ -13,6 +15,17 @@ const Nav = () => {
     axios.get('http://127.0.0.1:8000/api/user').then((res)=> setName(res.data.name))
     .catch(err => console.log(err));
   },[])
+
+  const menu= ()=>{
+    const menubar = document.getElementsByClassName('navb')[0];
+    if(menubar.style.display=="flex")
+    menubar.style.display="none";
+    else{
+      menubar.style.display="flex"
+    }
+    }
+
+
   return (
     <div>
       <Fragment>
@@ -21,7 +34,10 @@ const Nav = () => {
         <img src={logo} alt='' width={60} height={57}></img>
         <h2 className='logot'>Bistro Bliss</h2>
         </div>
-        <nav>
+        <nav id='navba'>
+        <span className='navicon' onClick={menu}>
+<button><AiOutlineMenu size={40}></AiOutlineMenu></button>
+</span>
           <ul className='navb'>
             <NavLink to={"/home"}>Home</NavLink>
             <NavLink to={"/about"}>About</NavLink>
@@ -31,8 +47,8 @@ const Nav = () => {
           </ul>
         </nav>
         
-        <Link to={"/book"} className='bookt'>Book a Table</Link>
-      <div className="profile">
+        <Link to={"/book"} className='bookt booktableb'>Book a Table</Link>
+      <div className="navprofout">
       <NavLink to={"/profile"} className='profname'>{name}</NavLink>
       <Link to={"/bookings"} className='bookt'>My Bookings</Link>
       <button  className='bookt' onClick={signout}>Sign Out</button>

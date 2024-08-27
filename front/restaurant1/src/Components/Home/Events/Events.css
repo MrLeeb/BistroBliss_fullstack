@@ -1,7 +1,30 @@
 .Heventshead{
     margin-top: 100px;
 }
+.Heventstitle{
+    text-align: start;
+    font-size: 50px;
+    width: 550px;
+    margin-left: 50px;
+}
 
 .HeventsContainer{
+    margin-left: 50px;
     display: flex;
+    /*  */
 }
+.HeventsEvent{
+    text-align: start;
+}
+.HeventsEvent img{
+    border-radius: 10px;
+}
+.HeventsEvent p{
+    width: 76%;
+}
+@media (max-width :1255px){
+    .HeventsContainer{
+        flex-wrap: wrap;
+        /* flex-direction: column; */
+    }
+      }
